@@ -52,8 +52,8 @@ int remove_at(MyArray* myArray, int pos );
  * MyArray.
  * PROMISES: removes the value of element myArray->array[pos], by moving the values in the
  * elements of myArray->array, starting from position pos+1, to the left. if process is
- * successful, increments list_size by one. Also, returns the value of the element that was
- * removed.
+ * successful, increments list_size by one. Also, returns the value of the element that
+ * was removed.
  */
 
 
@@ -86,4 +86,10 @@ int count(MyArray* myArray, int obj );
  * REQUIRES: pointer myArray points to an object of struct MyArray.
  * PROMISES: returns the count of elements of myArray->array that their value is equal to obj.
  */
+int remove_all(MyArray *myArray, int value);
+/*
+ * PROMISES: removes all the occurances of value and returns the number of removed
+ * values.
+ */
+
 #endif

@@ -1,3 +1,10 @@
+/*
+ *  lab1exe_D.cpp
+ *  ENSF 694 Lab 1 Exercise D
+ *  Completed by: Ryan Baker
+ *  Development Date: June 29, 2024
+ */
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -38,10 +45,10 @@ int main(void)
     good_copy(x, y, 4);
    
     cout << "\nThe values in array x after call to good_copy are expected to be:";
-    cout << "\n2.30, 1.20, 2.20, 4.10\n";
+    cout << "\n2.30, -8.25, 2.20, 4.10\n";
     cout << "And the values are:\n";
     for(int i = 0; i < 4; i++)
-        cout << setprecision(2) << x[i] << "  ";
+        cout << fixed << setprecision(2) << x[i] << "  ";
     
     cout << "\nThe values in matrix are:\n";
     print_matrix(matrix, 3);
@@ -83,11 +90,18 @@ double add_them (double arg[5])
 
 void good_copy(double *dest, double *source, int n)
 {
-    // mising code -- students must complete the implementation of this funcion.
+    for(int i = 0; i < n; i++){
+        dest[i] = source[i];
+    }
 }
 
 
 void print_matrix(double matrix[][COL_SIZE], int rows)
 {
-    // mising code -- students must complete the implementation of this funcion.
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < COL_SIZE; j++){
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
